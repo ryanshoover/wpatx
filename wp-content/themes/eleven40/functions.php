@@ -21,9 +21,6 @@
  *
  */
 
-define( 'THEME_URL',  get_stylesheet_directory_uri() );
-define( 'THEME_PATH', get_stylesheet_directory() );
-
 add_action('genesis_setup','child_theme_setup', 15);
 function child_theme_setup() {
 

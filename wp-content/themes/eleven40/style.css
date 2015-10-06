@@ -59,6 +59,7 @@
 * Footer
 * Comments
 * Gravity Forms
+* Video Meta
 * eleven40 Blue
 * eleven40 Green
 * eleven40 Red
@@ -72,20 +73,13 @@
 /* @group Import Fonts
 ------------------------------------------------------------ */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,300italic|Oxygen:300,400);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 
 /* @end */
 
 /* @group Defaults
 ------------------------------------------------------------ */
-
-body {
-	font-size: 18px;
-	color: #555;
-	font-family: 'Open Sans', helvetica, sans-serif;
-	line-height: 1.5em;
-
-}
 
 body,
 h1,
@@ -99,14 +93,13 @@ h6,
 p,
 select,
 textarea {
+	color: #333;
+	font-family: 'Lora', serif;
+	font-size: 16px;
+	line-height: 1.5625;
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Oxygen', 'Open Sans', helvetica, sans-serif;
-	font-weight: 300;
 }
 
 blockquote,
@@ -128,7 +121,7 @@ select,
 textarea {
 	box-sizing: border-box;
 	color: #333;
-	font-family: 'Open Sans', helvetica, sans-serif;
+	font-family: 'Lora', serif;
 	font-size: 14px;
 }
 
@@ -201,18 +194,11 @@ a img {
 ------------------------------------------------------------ */
 
 #header {
-	position: relative;
-	height: 275px;
-	background: #444 url(images/bg-image.jpg) left top;
-	background-size: cover;
-	overflow: hidden;
-}
-
+	background: #2b2b2b url(images/bg-pattern.png) left top;
+	}
 #header .wrap {
-	height: 100%;
-	box-sizing: border-box;
-	padding: 50px 0;
-	z-index: 2;
+	background: url(images/logo.png) top left no-repeat;
+	min-height: 150px;
 }
 
 #title-area {
@@ -222,18 +208,17 @@ a img {
 }
 
 #title {
-	font-family: 'Oxygen', arial, serif;
+	font-family: 'Oswald', arial, serif;
 	font-size: 30px;
 	line-height: 1.4;
 	margin: 12px 0 0 32px;
 	text-shadow: 0 1px #333;
 }
 
-#title a {
-	display: block;
-	background: url(images/logo.png) top left no-repeat;
-	width: 100%;
-	height: 100%;
+#title a,
+#title a:hover {
+	color: #fff;
+	text-decoration: none;
 }
 
 #description {
@@ -256,12 +241,11 @@ a img {
 .header-image #title a {
 	display: block;
 	float: left;
-	height: 180px;
+	height: 90px;
 	overflow: hidden;
 	padding: 0;
 	text-indent: -9999px;
-	width: 460px;
-	margin: 0;
+	width: 265px;
 }
 
 .header-image #description {
@@ -287,10 +271,6 @@ a img {
 /* @group Header / Primary / Secondary Navigation
 ------------------------------------------------------------ */
 
-#nav {
-	background-color: #f1f1f1;
-}
-
 .menu-primary,
 .menu-secondary {
 	clear: both;
@@ -305,6 +285,11 @@ a img {
 	float: right;
 	font-size: 14px;
 	text-transform: uppercase;
+}
+
+.menu-primary {
+	border-bottom: double #ddd;
+	border-top: double #ddd;
 }
 
 .menu-primary ul,
@@ -324,9 +309,9 @@ a img {
 .menu-secondary a,
 #header .menu a {
 	color: #333;
-	font-size: 1.1rem;
 	display: block;
-	padding: 20px 15px;
+	font-family: 'Oswald', arial, serif;
+	padding: 10px 15px;
 	position: relative;
 	text-decoration: none;
 	text-shadow: none;
@@ -460,6 +445,7 @@ ul.menu li.sfHover ul,
 
 .menu li.right {
 	float: right;
+	font-family: 'Oswald', arial, serif;
 	padding: 10px 15px;
 }
 
@@ -502,7 +488,8 @@ ul.menu li.sfHover ul,
 }
 
 #inner .wrap {
-	margin: 30px auto;
+	border-bottom: double #ddd;
+	margin: 0 auto 30px;
 	overflow: hidden;
 }
 
@@ -515,7 +502,7 @@ ul.menu li.sfHover ul,
 .page-title {
 	border-bottom: double #ddd;
 	border-top: double #ddd;
-	font-family: 'Open Sans', helvetica, sans-serif;
+	font-family: 'Lora', serif;
 	font-size: 30px;
 	line-height: 1.0;
 	overflow: hidden;
@@ -783,6 +770,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'Oswald', arial, serif;
 	font-weight: normal;
 	line-height: 1.25;
 	margin: 0 0 10px;
@@ -806,6 +794,7 @@ h2 a,
 h2 a:visited {
 	color: #333;
 	text-shadow: none;
+	font-family: 'Oswald', arial, serif;
 }
 
 h2 a:hover {
@@ -994,40 +983,6 @@ h5 {
 	width: 50%;
 }
 
-/* @end */
-
-/* @group Home Page
------------------------------------------------------------- */
-
-.recent-posts h2 a {
-	font-size: 1.75rem;
-}
-
-.recent-posts .genesis-grid {
-	margin: 40px 0;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.recent-posts img {
-	width: 100%;
-	height: auto;
-}
-
-.welcome-box p {
-	margin-bottom: 1em;
-}
-
-.tracks {
-	margin: 30px 0;
-	text-align: center;
-}
-
-.tracks img {
-	width: 80%;
-	height: auto;
-	margin: 0 auto;
-}
 
 /* @end */
 
@@ -1244,7 +1199,7 @@ video {
 	background-color: #444;
 	border: none;
 	color: #fff;
-	font-family: 'Oxygen', arial, serif;
+	font-family: 'Oswald', arial, serif;
 	font-size: 14px;
 	padding: 5px 12px;
 	text-shadow: none;
@@ -1861,6 +1816,32 @@ div.gform_wrapper .gform_footer {
 
 .gform_wrapper .one2five .gfield_radio input[type="radio"] {
 	float: none;
+}
+
+/* @end */
+
+/* @group Video Meta
+------------------------------------------------------------ */
+
+.video-meta {
+    margin-bottom: 1em;
+}
+
+p.video-meta-label {
+    width: 25%;
+    display: inline-block;
+    font-weight: normal;
+    text-align: right;
+    margin: 0 1em;
+    text-transform: uppercase;
+    font-family: 'Oswald', arial, serif;
+}
+
+p.video-meta-value {
+    width: 60%;
+    display: inline;
+    padding-left: 0%;
+    max-width: 60%;
 }
 
 /* @end */

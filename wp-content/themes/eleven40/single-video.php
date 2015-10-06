@@ -50,7 +50,8 @@ function rsh_show_video_meta() {
 
 		$field = $form->meta_box['fields'][ $key ];
 
-		echo '<h3 class="label">' . $field['name'] . '</h3>';
+		echo '<div class="video-meta">';
+		echo '<p class="video-meta-label">' . $field['name'] . '</p>';
 
 		$values = (array) $values;
 
@@ -64,7 +65,7 @@ function rsh_show_video_meta() {
 				$value = '<a href="' . $value . '">' . $value . '</a>';
 			}
 
-			echo '<div class="value">' . apply_filters( 'the_content', $value ) . '</div>';
+			echo '<p class="video-meta-value">' . $value . '</p></div>';
 		}
 	}
 }
